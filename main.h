@@ -10,6 +10,10 @@ void hello_string() {
 typedef long int int32;
 
 typedef struct stack_reg {
-    int32 A;
-    int32 B;
+    int32 AX;
+    int32 BX;
+    int32 CX;
+    int32 DX;
+    int32 SP; // Stack Pointer - might have to change that
+    int32 PC; // Program Counter - might have to attach a struct to this
 }Register;
