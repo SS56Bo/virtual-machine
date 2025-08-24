@@ -7,7 +7,8 @@ struct CPU {
 };
 
 int main(){
-    int32 value = 5685;
-    printf ("Value = %ld\n", value); 
+    // A small function to send a six to AX Reg
     return 0;
 }
+
+// Probably has to set a switch case

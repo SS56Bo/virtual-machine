@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <assert.h>
 #include <errno.h>
 
 typedef short int int16;
@@ -22,6 +23,12 @@ typedef enum {
     DIFF=0x03,
     MULT=0x04,
 }Opcode;
+
+typedef struct {
+    Opcode opcode;
+    Register reg;
+    int op_number;
+} Operation;
 
 /* For our instruction set, we can define a struct which in turn will 
  * use our Register and our Opcode enum to spurt out results.
